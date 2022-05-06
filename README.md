@@ -13,27 +13,35 @@ We'd love to collaborate with you to make Keploy great. To get started:
 
 # How to Contribute ??
 
-Strictly follow the given rules before sending us a PR.
+To Contribute to Keploy Student Program Website, please follow the following steps.
 
-1. Fork this Repository(by clicking Fork Icon on top right of the repository), to your profile.
-2. Now, clone this repository to your Local Machine using:
+1. Fork this Repository(by clicking Fork Icon on top right of the repository).
+
+
+2. Clone this repository to your Local Machine using:
 ``` bash
 git clone https://github.com/keploy/student-program
 
 ```
-3. Now install the required dependencies using:
+3. Install the required dependencies using:
 ```
 npm install
 ``` 
-4. Once the required packages are installed, run the following command to host your project on localhost:
+
+4. Once the required packages are installed, run the following command to host this project on localhost:
 ```
 npm start
 ```
-5. Now Commit & Push the changes, using :
+
+5. Make the desired changes
+
+
+7. Add, commit & push the changes, using:
+
 ``` bash
 git add .
-git commit -m "changes you made in the project"
+git commit -m "changes you made in the project" #Please make sure to mention which issue is closed by these changes. You can also use "cz c"
 git push 
 ```
-6. Now before sending a PR, make sure you 'Fetch Upstream' to avoid any kind of conflicts.
-7. Send a PR with the changes you made in the project. Adding 1 or 2 line project description is mandatory.
+
+6. Before raising a PR, please sure to 'Fetch Upstream' to avoid conflicts with existing codebase.
