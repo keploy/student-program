@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keploy Ninja Fellowship</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/9.7.0/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/9.7.0/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/9.7.0/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/9.7.0/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/9.7.0/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/9.7.0/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/9.7.0/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/9.7.0/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/9.7.0/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/9.7.0/firebase-performance-compat.js"></script>
+  <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+  <!-- <script type="text/javascript" src="./assets/fullpage.js/vendors/scrolloverflow.min.js"></script> -->
+  <script src="https://kit.fontawesome.com/d676f25411.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadEl = document.querySelector('#load');
+      try {
+        let app = firebase.app();
+        let features = [
+          'auth',
+          'database',
+          'firestore',
+          'functions',
+          'messaging',
+          'storage',
+          'analytics',
+          'remoteConfig',
+          'performance',
+        ].filter(feature => typeof app[feature] === 'function');
+        loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+      } catch (e) {
+        console.error(e);
+        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+      }
+    });
+  </script>
+
+  <!-- firebase api -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAbX3-FRC5pZpSuTY0q940i3jjEvO85Ozg",
+    authDomain: "keploy-ninja-fellowship.firebaseapp.com",
+    projectId: "keploy-ninja-fellowship",
+    storageBucket: "keploy-ninja-fellowship.appspot.com",
+    messagingSenderId: "866909010088",
+    appId: "1:866909010088:web:9d95f498a984263fab6a9d"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+
+  <!-- Bootstrap cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+
+
+</body>
+
+</html>
