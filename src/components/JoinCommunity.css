@@ -42,6 +42,10 @@ body{
     font-size: 1.3rem;
 }
 
+.JoinCommunityButton:hover {
+  background-color: #363D44;
+}
+
 .join {
     /* transform: scaleX(-1); */
     height: 35rem;

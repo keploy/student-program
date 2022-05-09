@@ -81,6 +81,11 @@
   top: 0;
   border-radius: 10px;
 }
+
+.glow-on-hover:hover:after {
+  background: #292929;
+}
+
   @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }

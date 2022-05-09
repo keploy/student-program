@@ -41,6 +41,10 @@ body{
     font-size: 1.3rem;
 }
 
+.landingPageButton:hover {
+  background-color: #363D44;
+}
+
 .searching {
     transform: scaleX(-1);
     height: 35rem;
