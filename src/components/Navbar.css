@@ -70,6 +70,7 @@
   opacity: 1;
 }
 
+/* This element sets the overall background color for the 'star us' button */
 .glow-on-hover:after {
   z-index: -1;
   content: '';
@@ -82,6 +83,7 @@
   border-radius: 10px;
 }
 
+/* :after pseudoelements do not have their own hover state. To change the button color on hover, the :after bg-color should be changed using the base button hover state. */
 .glow-on-hover:hover:after {
   background: #292929;
 }
