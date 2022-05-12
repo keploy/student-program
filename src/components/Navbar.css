@@ -9,7 +9,7 @@
 
 .navbarLogo{
     width:1.25rem;
-    margin:0 0.5rem;
+    margin-right: 0.6rem;
 }
 
 /* .navbarLog{
@@ -19,12 +19,16 @@
 
 .star-us {
   color : #fb6340 !important;
-  margin-right: 2px;
+  margin-right: 6px;
 }
 
 .glow-on-hover {
   width: 220px;
   height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
   border: none;
   outline: none;
   color: #fff;
@@ -66,6 +70,7 @@
   opacity: 1;
 }
 
+/* This element sets the overall background color for the 'star us' button */
 .glow-on-hover:after {
   z-index: -1;
   content: '';
@@ -77,6 +82,12 @@
   top: 0;
   border-radius: 10px;
 }
+
+/* :after pseudoelements do not have their own hover state. To change the button color on hover, the :after bg-color should be changed using the base button hover state. */
+.glow-on-hover:hover:after {
+  background: #292929;
+}
+
   @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
