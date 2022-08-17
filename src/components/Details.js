@@ -21,7 +21,7 @@ const Details = () => {
                                     <div className="DetailsColumnContentText">
                                         <p>Get one-on-one training about APIs and Keploy by the Keploy team.<br/>
                                         Perks:<br/>
-                                    👕 Exclusive t-shirt by Keploy</p>
+                                        🎁 Exclusive swag kit by Keploy</p>
                                     </div>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@ const Details = () => {
                                     <div className="DetailsColumnContentText">
                                         <p>Take sessions in your college or community and spread awareness about the world of APIs and Keploy.<br/>
                                         Perks:<br/>
-                                        🎁 Exclusive swag kit by Keploy</p>
+                                        🖼 Recognition on our Website</p>
                                     </div>
                                 </div>
                             </div>
