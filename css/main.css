@@ -1809,9 +1809,11 @@ input::-moz-focus-inner {
 .home-content {
   display: table-cell;
   width: 100%;
-  height: 100%;
+  height: 80%;
   position: relative;
   overflow: hidden;
+  background: rgb(251,156,82);
+background: linear-gradient(180deg, rgba(251,156,82,0.16290266106442575) 35%, rgba(255,255,255,1) 100%);
 }
 
 .home-content h3 {
