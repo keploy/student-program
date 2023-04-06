@@ -9,32 +9,17 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: export CI=false && npm run build --if-present
-    # disabling tests for now
-#     - run: npm test
     - name: Deploy
       uses: reggionick/s3-deploy@v3
       with:
-        folder: build
+        folder: "."
         bucket: ${{ secrets.S3_BUCKET }}
         bucket-region: ${{ secrets.S3_BUCKET_REGION }}
         dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
