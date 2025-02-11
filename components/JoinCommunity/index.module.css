@@ -1,0 +1,14 @@
+/* ====================== Join Community ====================== */
+.joinHeaderShineText {
+    /* background: linear-gradient(134deg, #c8c8c8, #fff 25%, #fff 75%, #777); */
+    background: linear-gradient(134deg, #ffad66, #fff 25%, #fff 75%, #ff6b6b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .joinHeaderBg {
+    /* background: linear-gradient(145deg, #0d0d0d, #1a1a1a 40%, #262626, #0a0a0a); */
+    background: linear-gradient(145deg, #f97316, #ef4444 40%, #d83434, #b02020);
+  }
+  /* =========================================================== */
