@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #ff914d;
+  --text-color: #fff;
+  /* --secondary-color: #60a5fa; */
+  /* --background-color: #18181b; */
+  /* --secondary-text-color: #a1a1aa; */
+  /* --accent-color: #ffc107; */
+}
+
+/* for debugging the frontend */
+.highlight__border {
+  border: 1px dashed tomato;
+}
+
+@layer utilities {
+  /* ====================== container ====================== */
+  .responsive-container {
+    /* responsive design */
+    @apply w-full sm:w-[calc(100vw-100px)] md:max-w-[calc(100vw-100px)] lg:max-w-[calc(100vw-100px)] xl:max-w-[1120px] px-4 mx-auto;
+  }
+  /* =========================================================== */
+}
+
+/* ====================== Font ====================== */
+
+/* It is being used on current keploy.io, so I am using this for this website */
+.roboto-f {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+/* =========================================================== */

@@ -1,0 +1,56 @@
+.parent {
+  @apply flex flex-col justify-center items-center gap-5 w-full;
+}
+
+@media (min-width: 1024px) {
+  /* https://cssgridgenerator.io/ */
+
+  .parent {
+    display: grid;
+    /* grid-template-columns: repeat(5, 1fr); */
+    /* grid-template-rows: repeat(10, 1fr); */
+
+    /* For now auto is working fine */
+    /* In future we can improve above grid-template */
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    gap: 15px;
+    /* border: 1px dashed tomato; */
+    width: 100%;
+  }
+
+  .div1 {
+    /* border: 1px dashed tomato; */
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+  }
+
+  .div2 {
+    /* border: 1px dashed tomato; */
+    grid-column: span 3 / span 3;
+    grid-row: span 6 / span 6;
+    grid-column-start: 3;
+  }
+
+  .div3 {
+    /* border: 1px dashed tomato; */
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-row-start: 4;
+  }
+
+  .div4 {
+    /* border: 1px dashed tomato; */
+    grid-column: span 3 / span 3;
+    grid-row: span 4 / span 4;
+    grid-row-start: 7;
+  }
+
+  .div5 {
+    /* border: 1px dashed tomato; */
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 4;
+    grid-row-start: 7;
+  }
+}
