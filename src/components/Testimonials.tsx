@@ -1,22 +1,11 @@
+"use client"
 import React from 'react';
-
-interface TestimonialProps {
-  name: string;
-  role: string;
-  content: string;
-}
-
-const TestimonialCard: React.FC<TestimonialProps> = ({ name, role, content }) => {
-  return (
-    <div className="bg-white rounded-lg border border-primary-400 shadow-lg p-6 mb-6">
-      <h2 className="text-2xl text-primary-400 font-bold mb-4">{name}</h2>
-      <p className="text-gray-700 mb-4">{role}</p>
-      <p className="text-gray-700">{content}</p>
-    </div>
-  );
-};
+import TestimonialCard from './TestimonialCard'; // Ensure the correct path to TestimonialCard
+import { useDarkMode } from '@/components/utils/DarkModeContext'; // Import the dark mode context
 
 const Testimonial: React.FC = () => {
+  const { darkMode } = useDarkMode(); // Access the dark mode state
+
   const testimonials = [
     {
       name: 'Sanskriti Gupta',
@@ -46,8 +35,8 @@ const Testimonial: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-400 font-normal leading-tight sm:leading-tight md:leading-tighter tracking-tighter mb-8 text-center">
+    <div className={`max-w-6xl mx-auto px-4 sm:px-6 py-12 ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>
+      <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight sm:leading-tight md:leading-tighter tracking-tighter mb-8 text-center ${darkMode ? 'text-gray-200' : 'text-primary-400'}`}>
         What do our previous fellows say?
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-eve">
@@ -55,7 +44,7 @@ const Testimonial: React.FC = () => {
           <TestimonialCard key={index} {...testimonial} />
         ))}
       </div>
-      <hr className='mt-10 mb-10 border-primary-400 border-opacity-60' />
+      <hr className={`mt-10 mb-10 ${darkMode ? 'border-gray-600' : 'border-primary-400'} border-opacity-60`} />
     </div>
   );
 };

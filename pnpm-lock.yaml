@@ -46,10 +46,10 @@ importers:
         specifier: ^20
         version: 20.17.17
       '@types/react':
-        specifier: ^19
+        specifier: ^19.0.8
         version: 19.0.8
       '@types/react-dom':
-        specifier: ^19
+        specifier: ^19.0.3
         version: 19.0.3(@types/react@19.0.8)
       eslint:
         specifier: ^9
@@ -64,7 +64,7 @@ importers:
         specifier: ^3.4.1
         version: 3.4.17
       typescript:
-        specifier: ^5
+        specifier: ^5.7.3
         version: 5.7.3
 
 packages:

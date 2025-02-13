@@ -6,14 +6,13 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class', // Enable dark mode via class strategy
   theme: {
     extend: {
-    
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
         // Brand Palette
-        // Primary headings, primary buttons, main elements
         primary: {
           50: "#FFF",
           100: "#FFB575",
@@ -21,8 +20,11 @@ export default {
           300: "#ff914d",
           400: "#E67643",
           500: "#C95919",
+          600: "#B34F1A",
+          700: "#99451B",
+          800: "#7F3B1C",
+          900: "#66311D",
         },
-        // Backgrounds, borders, subtle accents
         secondary: {
           50: "#FFFFFF",
           100: "#29456E",
@@ -30,19 +32,25 @@ export default {
           300: "#00163d",
           400: "#000E27",
           500: "#00061A",
+          600: "#000414",
+          700: "#00020F",
+          800: "#00010A",
+          900: "#000005",
         },
-        // Backgrounds, borders, subtle accents
         neutral: {
           100: "#f5f5f5",
           200: "#FFF",
           300: "#e6e2d4",
+          400: "#c2c2c2",
+          500: "#9e9e9e",
+          600: "#7a7a7a",
+          700: "#565656",
+          800: "#323232",
+          900: "#0e0e0e",
         },
         accent: {
-          // Success messages, notifications, progress indicators
           100: "#16704c",
-          // Highlights, icons, creative sections
           200: "#5f3131",
-          // Attention-grabbing elements, notifications, important highlights
           300: "#ef546b",
           400: "#d9cd9c",
           500: "#e6e2d4",
@@ -56,7 +64,6 @@ export default {
           400: "#be2c1b",
           500: "#6f0a0d",
         },
-
         gray: {
           100: "#FBFBFB",
           200: "#EAEAEA",
@@ -68,17 +75,6 @@ export default {
           800: "#333333",
           900: "#191919",
         },
-        // purple: {
-        //     100: '#F4F4FF',
-        //     200: '#E2E1FF',
-        //     300: '#CBCCFF',
-        //     400: '#ABABFF',
-        //     500: '#8D8DFF',
-        //     600: '#5D5DFF',
-        //     700: '#4B4ACF',
-        //     800: '#38379C',
-        //     900: '#262668',
-        // },
         purple: {
           50: "#FFA665",
           100: "#FFB97E",

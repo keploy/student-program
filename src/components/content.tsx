@@ -12,19 +12,19 @@ const Content = () => {
           title="Learn"
           description="Get one-on-one training about APIs and Keploy by the Keploy team."
           perks="🎁 Exclusive swag kit by Keploy"
-          gifUrl="http://127.0.0.1:5500/images/code1.gif" 
+          // gifUrl="http://127.0.0.1:5500/images/code1.gif" 
         />
         <Card
           title="Teach"
           description="Take sessions in your college or community and spread awareness about the world of APIs and Keploy."
           perks="🖼 Recognition on our Website"
-          gifUrl="http://127.0.0.1:5500/images/code2.gif" 
+          // gifUrl="http://127.0.0.1:5500/images/code2.gif" 
         />
         <Card
           title="Grow"
           description="The Keploy team will help you in creating your own community in your college if you wish to."
           perks="🌟 Mentorship on how to build and grow a community"
-          gifUrl="http://127.0.0.1:5500/images/code3.gif" 
+          // gifUrl="http://127.0.0.1:5500/images/code3.gif" 
         />
       </div>
     </div>
