@@ -3,14 +3,13 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "./logo";
 import NavItem from "./navItem";
-import CountingNumbers from "./countingNumbers";
 import { StarIcon, MoonIcon, SunIcon } from "@heroicons/react/16/solid";
-import { useDarkMode } from "@/components/utils/DarkModeContext"; // Import the dark mode context
+import { useDarkMode } from "@/components/utils/DarkModeContext";
 
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
   const [starsCount, setStarsCount] = useState<number>(1000);
-  const { darkMode, toggleDarkMode } = useDarkMode(); // Access the dark mode state and toggle function
+  const { darkMode, toggleDarkMode } = useDarkMode();
 
   useEffect(() => {
     const fetchStarsCount = async () => {
@@ -42,6 +41,13 @@ export default function Header() {
     return () => window.removeEventListener("scroll", scrollHandler);
   }, [top]);
 
+  const formatStars = (count: number): string => {
+    if (count >= 1000) {
+      return (count / 1000).toFixed(1) + "k";
+    }
+    return count.toString();
+  };
+
   return (
     <header
       className={`fixed w-full z-30 transition duration-300 ease-in-out ${!top ? "backdrop-blur-sm shadow-lg" : ""
@@ -53,11 +59,11 @@ export default function Header() {
             <Logo />
           </div>
           <nav className="hidden md:flex justify-start flex-grow-0 w-6/12 ">
-            <ul className="flex grow justify-enditems-center">
+            <ul className="flex grow">
               <li>
                 <Link
                   href="/"
-                  className="font-medium text-gray-600  hover:text-primary-300 px-3 py-3 flex items-center transition duration-150 ease-in-out"
+                  className="font-medium text-gray-600 hover:text-primary-300 px-3 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   <NavItem name="Home" />
                 </Link>
@@ -65,7 +71,7 @@ export default function Header() {
               <li>
                 <Link
                   href=""
-                  className="font-medium text-gray-600  hover:text-primary-300 px-3 py-3 flex items-center transition duration-150 ease-in-out"
+                  className="font-medium text-gray-600 hover:text-primary-300 px-3 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   <NavItem name="About" />
                 </Link>
@@ -73,7 +79,7 @@ export default function Header() {
               <li>
                 <Link
                   href=""
-                  className="font-medium text-gray-600  hover:text-primary-300 px-3 py-3 flex items-center transition duration-150 ease-in-out"
+                  className="font-medium text-gray-600 hover:text-primary-300 px-3 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   <NavItem name="Join" />
                 </Link>
@@ -81,7 +87,7 @@ export default function Header() {
               <li>
                 <Link
                   href=""
-                  className="font-medium text-gray-600  hover:text-primary-300 px-3 py-3 flex items-center transition duration-150 ease-in-out"
+                  className="font-medium text-gray-600 hover:text-primary-300 px-3 py-3 flex items-center transition duration-150 ease-in-out"
                 >
                   <NavItem name="Testimonials" />
                 </Link>
@@ -91,7 +97,7 @@ export default function Header() {
           <div className="header-btn-container flex-grow-0 w-4/12 justify-end hidden sm:flex items-center">
             <button
               onClick={toggleDarkMode}
-              className={`p-2 rounded-full mr-3 ${darkMode ? 'bg-gray-700 text-yellow-300' : 'bg-gray-200 text-gray-800'
+              className={`p-2 rounded-full mr-3 ${darkMode ? 'bg-gray-700 text-yellow-300' : 'bg-gray-200 text-black'
                 } hover:bg-opacity-80 transition-colors`}
               aria-label="Toggle dark mode"
             >
@@ -101,18 +107,14 @@ export default function Header() {
                 <MoonIcon className="h-5 w-5" />
               )}
             </button>
-            <div className="rounded-full overflow-hidden p-2.5 border-opacity-40 relative transition-all  group hover:border-2 hover:border-primary-400">
-              <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-orange-500 opacity-60 transition-transform duration-1000 ease-out group-hover:translate-x-[-400%]" />
+            <button className="w-full mr-3 p-1 overflow-hidden border-2 hover:bg-primary-200/20 border-primary-50/0 hover:border-2 hover:border-orange-400 hover:text-primary-300 px-3 border-opacity-0 rounded-full lg:w-auto sm:border-opacity-100 relative group/button">
+              <span className="absolute left-0 -mt-12 h-32 w-12 -translate-x-36 rotate-12 bg-orange-500 opacity-10 transition-transform duration-700 ease-out group-hover/button:-translate-x-[-400%]" />
               <Link
-                className="flex items-center gap-2 text-sm text-primary-400 font-extrabold transition-colors hover:text-primary-500"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Keploy Github Repo"
-                data-radix-collection-item=""
-                href="https://www.github.com/keploy/keploy"
+                className="flex items-center ml-4 text-sm font-extrabold transition-colors lg:ml-0"
+                href="https://github.com/keploy/keploy"
               >
                 <svg
-                  className={`h-5 w-5 ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}
+                  className={`h-5 w-5 ${darkMode ? 'text-gray-200' : 'text-black'}`}
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -123,25 +125,18 @@ export default function Header() {
                     fillRule="evenodd"
                   />
                 </svg>
-                <span className="text-gradient-500 opacity-30 hover:text-primary-500"> | </span>
-                <span className="text-base flex gap-1">
-                  <StarIcon className="size-4 text-yellow-300 transition-all duration-300 group-hover:filter group-hover:drop-shadow-[0_0_2px_#FFD700]" />
-                </span>
-                <span className="text-base flex gap-1">
-                  <CountingNumbers className={`font bold ${darkMode ? 'text-gray-200' : 'text-black'}`} />
+                <span className="flex gap-1 text-base">
+                  <StarIcon className="size-5 text-yellow-300 transition-all duration-300 group-hover:filter group-hover:drop-shadow-[0_0_2px_#FFD700]" />
+                  <p className={`font-semibold ${darkMode ? 'text-gray-200' : 'text-black'}`}>{formatStars(starsCount)}</p>
                 </span>
               </Link>
-            </div>
-            <div className="ml-3 border border-primary-400 bg-primary-300 rounded-full overflow-hidden p-2.5 border-opacity-40 relative transition-all  group">
-              <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-gray-100 opacity-60 transition-transform duration-1000 ease-out group-hover:translate-x-[-400%]" />
-              <Link
-                href="https://app.keploy.io/signin"
-                target="_blank"
-                className="btn-sm py-3 text-gray-200  rounded-md overflow-hidden p-2.5 border-opacity-40 relative transition-all  group"
-              >
-                <span>Sign In</span>
-              </Link>
-            </div>
+            </button>
+            <Link
+              href="https://app.keploy.io/signin"
+              className="gap-2 text-sm font-medium bg-gradient-to-r from-orange-500 to-red-500 hover:from-red-500 hover:to-orange-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out text-white px-7 py-2.5 flex items-center justify-center"
+            >
+              <span>Sign In</span>
+            </Link>
           </div>
         </div>
       </div>

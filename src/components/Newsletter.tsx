@@ -31,16 +31,14 @@ const NewsletterSignup: React.FC = () => {
           required
         />
         <div className="flex justify-center">
-          <div className={`border rounded-full overflow-hidden p-2.5 border-opacity-40 relative transition-all group ${darkMode ? 'border-gray-600 bg-gray-800' : 'border-primary-400 bg-primary-300'}`}>
-            <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-gray-100 opacity-60 transition-transform duration-1000 ease-out group-hover:translate-x-[-420%]" />
-            <button
-              type="submit"
-              className="btn-sm text-gray-200 rounded-md overflow-hidden p-1 border-opacity-40 relative transition-all group"
-            >
-              <span>Subscribe</span>
-            </button>
-          </div>
+          <button
+            type="submit"
+            className="gap-2 text-sm font-medium bg-gradient-to-r from-orange-500 to-red-500 hover:from-red-500 hover:to-orange-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out text-white px-8 py-2.5 flex items-center justify-center"
+          >
+            <span>Subscribe</span>
+          </button>
         </div>
+
       </form>
 
       <div className="text-center mb-8">
