@@ -1,14 +1,14 @@
 export default function Footer() {
   return (
-    <footer className="bg-muted py-16">
+    <footer className="bg-[#00163D] text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Logo and social icons */}
           <div className="md:col-span-4 lg:col-span-3">
             <div className="flex items-center mb-6">
-              <span className="text-xl font-bold text-[#FF6B35]">Keploy</span>
+              <span className="text-xl font-bold text-[#FF914D]">Keploy</span>
             </div>
-            <p className="text-sm text-muted-foreground mb-6 max-w-xs">
+            <p className="text-sm text-gray-300 mb-6 max-w-xs">
               Developer-centric API testing tool designed to simplify and
               accelerate the testing process. By creating tests with built-in
               mocks, Keploy offers a faster alternative to traditional unit
@@ -16,19 +16,19 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <i
-                className="fa fa-twitter text-lg text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                className="fa fa-twitter text-lg text-gray-300 hover:text-[#FF914D] transition-colors"
                 aria-hidden="true"
               ></i>
               <i
-                className="fa fa-github text-lg text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                className="fa fa-github text-lg text-gray-300 hover:text-[#FF914D] transition-colors"
                 aria-hidden="true"
               ></i>
               <i
-                className="fa fa-linkedin text-lg text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                className="fa fa-linkedin text-lg text-gray-300 hover:text-[#FF914D] transition-colors"
                 aria-hidden="true"
               ></i>
               <i
-                className="fa fa-youtube text-lg text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                className="fa fa-youtube text-lg text-gray-300 hover:text-[#FF914D] transition-colors"
                 aria-hidden="true"
               ></i>
             </div>
@@ -37,12 +37,12 @@ export default function Footer() {
           <div className="md:col-span-8 lg:col-span-9">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
               <div>
-                <h3 className="text-lg font-semibold mb-4">Solutions</h3>
+                <h3 className="text-lg font-semibold mb-4 text-white">Solutions</h3>
                 <ul className="space-y-2">
                   <li>
                     <a
                       href="#"
-                      className="text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                      className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       API Testing
                     </a>
@@ -50,7 +50,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      className="text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                      className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Integration Testing
                     </a>
@@ -58,7 +58,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      className="text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                      className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Unit Testing
                     </a>
@@ -66,7 +66,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      className="text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                      className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       VS Code Extension
                     </a>
@@ -76,12 +76,12 @@ export default function Footer() {
 
               {/* Developers Column */}
               <div>
-                <h3 className="text-lg font-semibold mb-4">Developers</h3>
+                <h3 className="text-lg font-semibold mb-4 text-white">Developers</h3>
                 <ul className="space-y-2">
                   <li>
                     <a
                       href="#"
-                      className="text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                      className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Documentation
                     </a>
@@ -89,7 +89,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      className="text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                      className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       CLI Reference
                     </a>
@@ -97,7 +97,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      className="text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                      className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       GitHub
                     </a>
@@ -105,7 +105,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      className="text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                      className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Getting Started
                     </a>
@@ -115,12 +115,12 @@ export default function Footer() {
 
               {/* Resources Column */}
               <div>
-                <h3 className="text-lg font-semibold mb-4">Resources</h3>
+                <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
                 <ul className="space-y-2">
                   <li>
                     <a
                       href="#"
-                      className="text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                      className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Integrations
                     </a>
@@ -128,7 +128,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      className="text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                      className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Blog
                     </a>
@@ -138,12 +138,12 @@ export default function Footer() {
 
               {/* Company Column */}
               <div>
-                <h3 className="text-lg font-semibold mb-4">Company</h3>
+                <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
                 <ul className="space-y-2">
                   <li>
                     <a
                       href="#"
-                      className="text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                      className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       About
                     </a>
@@ -151,7 +151,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      className="text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                      className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Privacy
                     </a>
@@ -159,7 +159,7 @@ export default function Footer() {
                   <li>
                     <a
                       href="#"
-                      className="text-muted-foreground hover:text-[#FF6B35] transition-colors"
+                      className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Cookie Policy
                     </a>
@@ -171,8 +171,8 @@ export default function Footer() {
         </div>
 
         {/* Copyright at the bottom */}
-        <div className="mt-12 pt-6 border-t border-border text-center md:text-left">
-          <p className="text-muted-foreground">
+        <div className="mt-12 pt-6 border-t border-gray-800 text-center md:text-left">
+          <p className="text-gray-400">
             © Keploy Inc {new Date().getFullYear()}
           </p>
         </div>

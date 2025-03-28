@@ -27,10 +27,10 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-20 bg-[#F5F5F5]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#412074]">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-[#00163D]">
             What's in it for you?
           </h1>
         </div>
@@ -52,13 +52,13 @@ export default function AboutSection() {
                     />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-center mb-4 text-[#412074]">
+                <h3 className="text-2xl font-bold text-center mb-4 text-[#00163D]">
                   {benefit.title}
                 </h3>
                 <p className="text-muted-foreground mb-4 text-center">
                   {benefit.description}
                 </p>
-                <p className="text-[#FF6B35] font-medium text-center">
+                <p className="text-[#FF914D] font-medium text-center">
                   {benefit.perks}
                 </p>
               </CardContent>

@@ -27,7 +27,7 @@ export default function NewsletterSection() {
   };
 
   return (
-    <section className="py-16 bg-[#FF6B35]">
+    <section className="py-16 bg-[#FF914D]">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-white">
@@ -49,7 +49,7 @@ export default function NewsletterSection() {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="bg-white text-[#FF6B35] hover:bg-white/90 rounded-full p-2 aspect-square"
+              className="bg-white text-[#FF914D] hover:bg-white/90 rounded-full p-2 aspect-square"
             >
               <ArrowRight className="h-5 w-5" />
             </Button>

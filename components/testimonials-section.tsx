@@ -54,10 +54,10 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-background">
+    <section id="testimonials" className="py-20 bg-[#E6E2D4]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#412074]">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#00163D]">
             What do our previous fellows say?
           </h1>
         </div>
@@ -89,7 +89,7 @@ export default function TestimonialsSection() {
                   href={testimonial.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block hover:text-[#FF6B35] transition-colors"
+                  className="block hover:text-[#FF914D] transition-colors"
                 >
                   <p className="text-muted-foreground line-clamp-4">
                     {testimonial.quote}

@@ -46,7 +46,7 @@ export default function Header() {
           >
             <div className="flex flex-col h-full">
               <SheetHeader className="p-6 border-b border-none">
-                <SheetTitle className="text-xl font-bold text-[#FF6B35]">
+                <SheetTitle className="text-xl font-bold text-[#FF914D]">
                   Navigation
                 </SheetTitle>
               </SheetHeader>
@@ -61,7 +61,7 @@ export default function Header() {
                       <li>
                         <a
                           href="#home"
-                          className="smoothscroll flex items-center text-gray-600 hover:text-[#FF6B35] transition-colors py-1"
+                          className="smoothscroll flex items-center text-gray-600 hover:text-[#FF914D] transition-colors py-1"
                         >
                           Home
                         </a>
@@ -69,7 +69,7 @@ export default function Header() {
                       <li>
                         <a
                           href="#about"
-                          className="smoothscroll flex items-center text-gray-600 hover:text-[#FF6B35] transition-colors py-1"
+                          className="smoothscroll flex items-center text-gray-600 hover:text-[#FF914D] transition-colors py-1"
                         >
                           About
                         </a>
@@ -77,7 +77,7 @@ export default function Header() {
                       <li>
                         <a
                           href="#join"
-                          className="smoothscroll flex items-center text-gray-600 hover:text-[#FF6B35] transition-colors py-1"
+                          className="smoothscroll flex items-center text-gray-600 hover:text-[#FF914D] transition-colors py-1"
                         >
                           Join
                         </a>
@@ -85,7 +85,7 @@ export default function Header() {
                       <li>
                         <a
                           href="#testimonials"
-                          className="smoothscroll flex items-center text-gray-600 hover:text-[#FF6B35] transition-colors py-1"
+                          className="smoothscroll flex items-center text-gray-600 hover:text-[#FF914D] transition-colors py-1"
                         >
                           Testimonials
                         </a>
@@ -99,7 +99,7 @@ export default function Header() {
                         href="https://join.slack.com/t/keploy/shared_invite/zt-2poflru6f-_VAuvQfCBT8fDWv1WwSbkw"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center h-10 w-10 rounded-full bg-muted text-gray-600 hover:text-[#FF6B35] hover:bg-muted/80 transition-colors"
+                        className="flex items-center justify-center h-10 w-10 rounded-full bg-muted text-gray-600 hover:text-[#FF914D] hover:bg-muted/80 transition-colors"
                       >
                         <i
                           className="fa fa-slack text-lg"
@@ -110,7 +110,7 @@ export default function Header() {
                         href="https://twitter.com/Keployio"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center h-10 w-10 rounded-full bg-muted text-gray-600 hover:text-[#FF6B35] hover:bg-muted/80 transition-colors"
+                        className="flex items-center justify-center h-10 w-10 rounded-full bg-muted text-gray-600 hover:text-[#FF914D] hover:bg-muted/80 transition-colors"
                       >
                         <i
                           className="fa fa-twitter text-lg"
@@ -121,7 +121,7 @@ export default function Header() {
                         href="https://github.com/keploy/keploy"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center h-10 w-10 rounded-full bg-muted text-gray-600 hover:text-[#FF6B35] hover:bg-muted/80 transition-colors"
+                        className="flex items-center justify-center h-10 w-10 rounded-full bg-muted text-gray-600 hover:text-[#FF914D] hover:bg-muted/80 transition-colors"
                       >
                         <i
                           className="fa fa-github text-lg"
@@ -132,7 +132,7 @@ export default function Header() {
                         href="https://www.linkedin.com/company/keploy"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center h-10 w-10 rounded-full bg-muted text-gray-600 hover:text-[#FF6B35] hover:bg-muted/80 transition-colors"
+                        className="flex items-center justify-center h-10 w-10 rounded-full bg-muted text-gray-600 hover:text-[#FF914D] hover:bg-muted/80 transition-colors"
                       >
                         <i
                           className="fa fa-linkedin text-lg"
@@ -143,7 +143,7 @@ export default function Header() {
                         href="https://www.youtube.com/@keploy"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center h-10 w-10 rounded-full bg-muted text-gray-600 hover:text-[#FF6B35] hover:bg-muted/80 transition-colors"
+                        className="flex items-center justify-center h-10 w-10 rounded-full bg-muted text-gray-600 hover:text-[#FF914D] hover:bg-muted/80 transition-colors"
                       >
                         <i
                           className="fa fa-youtube text-lg"

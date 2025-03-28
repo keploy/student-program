@@ -51,7 +51,7 @@
   :root {
     --radius: 0.5rem;
 
-    /* Keploy color scheme */
+    /* Updated Keploy color scheme */
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
 
@@ -61,78 +61,78 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    /* Keploy orange */
-    --primary: 16 100% 60%;
+    /* Updated Keploy orange */
+    --primary: 24 100% 65%;
     --primary-foreground: 0 0% 100%;
 
     /* Light gray */
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 215 100% 12%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Light gray for muted elements */
-    --muted: 240 4.8% 95.9%;
+    --muted: 0 0% 96.1%;
     --muted-foreground: 240 3.8% 46.1%;
 
     /* Light gray for accents */
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 153 71% 26%;
+    --accent-foreground: 0 0% 100%;
 
     /* Red for destructive actions */
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 347 77% 63%;
     --destructive-foreground: 0 0% 98%;
 
     /* Border and input colors */
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 16 100% 60%;
+    --ring: 24 100% 65%;
 
-    /* Keploy purple for special elements */
-    --purple: 267 55% 37%;
-    --purple-foreground: 0 0% 100%;
+    /* Updated secondary color for special elements */
+    --secondary-dark: 215 100% 12%;
+    --secondary-dark-foreground: 0 0% 100%;
 
     /* Dark background for dark sections */
-    --dark-bg: 240 30% 6%;
+    --dark-bg: 215 100% 12%;
     --dark-fg: 0 0% 100%;
   }
 
   .dark {
-    --background: 240 30% 6%;
+    --background: 215 100% 12%;
     --foreground: 0 0% 98%;
 
-    --card: 240 25% 8%;
+    --card: 215 100% 8%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 25% 8%;
+    --popover: 215 100% 8%;
     --popover-foreground: 0 0% 98%;
 
-    /* Keploy orange in dark mode */
-    --primary: 16 100% 60%;
+    /* Updated Keploy orange in dark mode */
+    --primary: 24 100% 65%;
     --primary-foreground: 0 0% 100%;
 
-    /* Darker gray for secondary elements */
-    --secondary: 240 3.7% 15.9%;
+    /* Darker blue for secondary elements */
+    --secondary: 215 100% 10%;
     --secondary-foreground: 0 0% 98%;
 
     /* Darker gray for muted elements */
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
 
-    /* Darker gray for accents */
-    --accent: 240 3.7% 15.9%;
+    /* Accent colors */
+    --accent: 153 71% 26%;
     --accent-foreground: 0 0% 98%;
 
-    /* Red for destructive actions */
-    --destructive: 0 62.8% 30.6%;
+    /* Updated destructive color */
+    --destructive: 347 77% 50%;
     --destructive-foreground: 0 0% 98%;
 
     /* Border and input colors for dark mode */
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 16 100% 60%;
+    --ring: 24 100% 65%;
 
-    /* Keploy purple for special elements */
-    --purple: 267 55% 37%;
-    --purple-foreground: 0 0% 100%;
+    /* Updated secondary color for special elements */
+    --secondary-dark: 215 100% 12%;
+    --secondary-dark-foreground: 0 0% 100%;
   }
 }
 
@@ -146,7 +146,7 @@
 
   /* Keploy specific styles */
   h1.keploy-heading {
-    @apply text-[#412074] font-bold;
+    @apply text-[#00163D] font-bold;
   }
 
   .keploy-orange-text {
@@ -157,16 +157,16 @@
     @apply bg-primary text-primary-foreground;
   }
 
-  .keploy-purple-text {
-    @apply text-[#412074];
+  .keploy-secondary-text {
+    @apply text-[#00163D];
   }
 
-  .keploy-purple-bg {
-    @apply bg-[#412074] text-white;
+  .keploy-secondary-bg {
+    @apply bg-[#00163D] text-white;
   }
 
   .keploy-dark-section {
-    @apply bg-[#0A0B1A] text-white;
+    @apply bg-[#00163D] text-white;
   }
 
   .keploy-btn-primary {
@@ -174,7 +174,27 @@
   }
 
   .keploy-btn-secondary {
-    @apply bg-white hover:bg-gray-100 text-[#412074] border border-[#412074] rounded-full px-6 py-2 font-medium transition-colors;
+    @apply bg-white hover:bg-gray-100 text-[#00163D] border border-[#00163D] rounded-full px-6 py-2 font-medium transition-colors;
+  }
+  
+  .keploy-accent-green {
+    @apply text-[#16704C];
+  }
+  
+  .keploy-accent-red {
+    @apply text-[#5F3131];
+  }
+  
+  .keploy-accent-pink {
+    @apply text-[#EF546B];
+  }
+  
+  .keploy-accent-beige {
+    @apply text-[#D9CD9C];
+  }
+  
+  .keploy-gradient-bg {
+    @apply bg-gradient-to-r from-[#F5F5F5] via-[#FF914D] to-[#6F0A0D];
   }
 }
 
