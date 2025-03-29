@@ -94,6 +94,7 @@ export default function AboutSection() {
                           src={benefit.image || "/placeholder.svg"}
                           alt={benefit.title}
                           fill
+                          sizes="(max-width: 768px) 100px, 150px"
                           className="object-contain z-10 relative p-2"
                         />
                       </div>
@@ -145,6 +146,7 @@ export default function AboutSection() {
                           src={benefit.image || "/placeholder.svg"}
                           alt={benefit.title}
                           fill
+                          sizes="(max-width: 768px) 100px, 150px"
                           className="object-contain z-10 relative p-2"
                         />
                       </div>

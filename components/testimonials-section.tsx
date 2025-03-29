@@ -105,6 +105,7 @@ export default function TestimonialsSection() {
                           src={testimonial.image || "/placeholder.svg"}
                           alt={testimonial.name}
                           fill
+                          sizes="(max-width: 768px) 64px, 64px"
                           className="object-cover rounded-full"
                         />
                       </div>

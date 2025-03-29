@@ -1,3 +1,7 @@
+"use client";
+
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-[#00163D] text-white py-16">
@@ -6,7 +10,15 @@ export default function Footer() {
           {/* Logo and social icons */}
           <div className="md:col-span-4 lg:col-span-3">
             <div className="flex items-center mb-6">
-              <span className="text-xl font-bold text-[#FF914D]">Keploy</span>
+              <a href="https://keploy.io">
+                <Image
+                  src="/images/logo.png"
+                  alt="Keploy Logo"
+                  width={120}
+                  height={40}
+                  className="h-10 w-auto object-contain"
+                />
+              </a>
             </div>
             <p className="text-sm text-gray-300 mb-6 max-w-xs">
               Developer-centric API testing tool designed to simplify and
@@ -160,7 +172,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright at the bottom */}
         <div className="mt-12 pt-6 border-t border-gray-800 text-center md:text-left">
           <p className="text-gray-400">
             © Keploy Inc {new Date().getFullYear()}

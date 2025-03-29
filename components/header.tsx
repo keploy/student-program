@@ -2,15 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 
 export default function Header() {
   return (
@@ -23,7 +14,7 @@ export default function Header() {
               alt="Keploy Logo"
               width={120}
               height={40}
-              className="h-10 w-auto"
+              className="h-10 w-auto object-contain"
             />
           </Link>
         </div>

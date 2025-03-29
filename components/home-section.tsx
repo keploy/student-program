@@ -212,18 +212,20 @@ export default function HomeSection() {
               style={{ transitionDelay: "0.8s" }}
             >
               <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-                <Button
-                  asChild
-                  className="animated-gradient-button text-white rounded-full border-none hover:shadow-lg px-8 py-6 text-lg"
-                >
-                  <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSc5132o6GBa1PLZOVRK3ZxEwUE8DGJivguHoREwOprg0AMDzg/viewform"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <div className="w-[200px] mx-auto sm:w-auto">
+                  <Button
+                    asChild
+                    className="animated-gradient-button text-white rounded-full border-none hover:shadow-lg px-6 py-4 text-base flex items-center justify-center"
                   >
-                    Get Started
-                  </a>
-                </Button>
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSc5132o6GBa1PLZOVRK3ZxEwUE8DGJivguHoREwOprg0AMDzg/viewform"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Get Started
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
 
