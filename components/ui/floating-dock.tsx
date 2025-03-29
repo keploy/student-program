@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import {
   AnimatePresence,
   MotionValue,
@@ -64,7 +63,7 @@ const FloatingDockDesktop = ({
   let mouseY = useMotionValue(Infinity);
   return (
     <motion.div
-      onMouseMove={(e) => mouseY.set(e.pageY)}
+      onMouseMove={(e) => mouseY.set(e.clientY)}
       onMouseLeave={() => mouseY.set(Infinity)}
       className={cn(
         "mx-auto hidden md:flex flex-col w-12 gap-3 items-center rounded-full bg-gray-50 dark:bg-neutral-900 py-3 px-2",

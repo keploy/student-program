@@ -1,47 +1,62 @@
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
-import { 
-  IconBrandGithub, 
-  IconBrandX, 
-  IconBrandYoutube, 
-  IconBrandLinkedin, 
-  IconBrandSlack 
-} from "@tabler/icons-react";
+import {
+  GithubIcon,
+  TwitterIcon,
+  YoutubeIcon,
+  LinkedinIcon,
+  SlackIcon,
+} from "lucide-react";
 
 export default function SocialDock() {
   const socialLinks = [
     {
       title: "Slack",
       icon: (
-        <IconBrandSlack className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <SlackIcon
+          fill="currentColor"
+          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+        />
       ),
       href: "https://join.slack.com/t/keploy/shared_invite/zt-2poflru6f-_VAuvQfCBT8fDWv1WwSbkw",
     },
     {
       title: "Twitter",
       icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <TwitterIcon
+          fill="currentColor"
+          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+        />
       ),
       href: "https://twitter.com/Keployio",
     },
     {
       title: "GitHub",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <GithubIcon
+          fill="currentColor"
+          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+        />
       ),
       href: "https://github.com/keploy/keploy",
     },
     {
       title: "LinkedIn",
       icon: (
-        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <LinkedinIcon
+          fill="currentColor"
+          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+        />
       ),
       href: "https://www.linkedin.com/company/keploy",
     },
     {
       title: "YouTube",
       icon: (
-        <IconBrandYoutube className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <YoutubeIcon
+          fill="currentColor"
+          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+        />
       ),
       href: "https://www.youtube.com/@keploy",
     },

@@ -1,5 +1,9 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
+import { useEffect, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface Testimonial {
   name: string;
@@ -53,53 +57,111 @@ export default function TestimonialsSection() {
     },
   ];
 
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: windowWidth < 768 ? 1 : windowWidth < 1024 ? 2 : 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    arrows: windowWidth >= 768,
+    centerMode: windowWidth < 768,
+    centerPadding: windowWidth < 768 ? '40px' : '0',
+    className: "testimonial-slider",
+  };
+
   return (
-    <section id="testimonials" className="py-20 bg-[#E6E2D4]">
+    <section id="testimonials" className="py-20 bg-gradient-to-br from-[#F5F5F5] to-[#E6E2D4]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#00163D]">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#00163D" }}>
             What do our previous fellows say?
-          </h1>
+          </h2>
+          <div className="w-24 h-1 bg-[#FF914D] mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Slider {...sliderSettings}>
           {testimonials.map((testimonial, index) => (
-            <Card
-              key={index}
-              className="overflow-hidden hover:shadow-lg transition-shadow border border-gray-100"
-            >
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                    <Image
-                      src={testimonial.image || "/placeholder.svg"}
-                      alt={testimonial.name}
-                      fill
-                      className="object-cover"
-                    />
+            <div key={index} className="px-3 py-2">
+              <Card
+                className="h-full overflow-hidden transition-all duration-300 hover:shadow-xl border border-[#D9CD9C]/30 hover:border-[#FF914D]/50 bg-white/90 backdrop-blur"
+              >
+                <CardContent className="p-6 h-full flex flex-col">
+                  <div className="mb-4 pb-4 border-b border-[#E6E2D4]">
+                    <div className="flex items-center">
+                      <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-[#FF914D] p-0.5">
+                        <Image
+                          src={testimonial.image || "/placeholder.svg"}
+                          alt={testimonial.name}
+                          fill
+                          className="object-cover rounded-full"
+                        />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-[#00163D]">{testimonial.name}</p>
+                        <p className="text-sm text-[#5F3131]">
+                          {testimonial.role}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-semibold">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">
-                      {testimonial.role}
+                  
+                  <div className="flex-grow">
+                    <p className="text-[#00163D]/80 italic relative">
+                      {testimonial.quote}
                     </p>
                   </div>
-                </div>
-                <a
-                  href={testimonial.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block hover:text-[#FF914D] transition-colors"
-                >
-                  <p className="text-muted-foreground line-clamp-4">
-                    {testimonial.quote}
-                  </p>
-                </a>
-              </CardContent>
-            </Card>
+                  
+                  <a
+                    href={testimonial.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block text-[#16704C] hover:text-[#FF914D] transition-colors font-medium text-sm"
+                  >
+                    Read full story →
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
           ))}
-        </div>
+        </Slider>
       </div>
+      
+      <style jsx global>{`
+        .testimonial-slider .slick-track {
+          display: flex !important;
+        }
+        .testimonial-slider .slick-slide {
+          height: inherit !important;
+          display: flex !important;
+        }
+        .testimonial-slider .slick-slide > div {
+          display: flex;
+          width: 100%;
+          height: 100%;
+        }
+        .testimonial-slider .slick-dots li button:before {
+          color: #FF914D;
+        }
+        .testimonial-slider .slick-dots li.slick-active button:before {
+          color: #00163D;
+        }
+        .testimonial-slider .slick-prev:before, 
+        .testimonial-slider .slick-next:before {
+          color: #FF914D;
+        }
+      `}</style>
     </section>
   );
 }

@@ -25,7 +25,7 @@ export default function Footer() {
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="#"
+                      href="https://keploy.io/api-testing"
                       className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       API Testing
@@ -33,7 +33,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://keploy.io/integration-testing"
                       className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Integration Testing
@@ -41,7 +41,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://keploy.io/unit-test-generator"
                       className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Unit Testing
@@ -49,7 +49,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://marketplace.visualstudio.com/items?itemName=Keploy.keployio"
                       className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       VS Code Extension
@@ -66,7 +66,7 @@ export default function Footer() {
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="#"
+                      href="https://keploy.io/docs"
                       className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Documentation
@@ -74,7 +74,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://keploy.io/docs/running-keploy/cli-commands/"
                       className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       CLI Reference
@@ -82,7 +82,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://github.com/keploy"
                       className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       GitHub
@@ -90,7 +90,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://keploy.io/docs/server/installation/"
                       className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Getting Started
@@ -107,7 +107,7 @@ export default function Footer() {
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="#"
+                      href="https://keploy.io/docs/ci-cd/github/"
                       className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Integrations
@@ -115,7 +115,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://keploy.io/blog"
                       className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Blog
@@ -132,7 +132,7 @@ export default function Footer() {
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="#"
+                      href="https://keploy.io/about"
                       className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       About
@@ -140,7 +140,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://keploy.io/privacy-policy"
                       className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Privacy
@@ -148,7 +148,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="https://keploy.io/cookie-policy"
                       className="text-gray-300 hover:text-[#FF914D] transition-colors"
                     >
                       Cookie Policy
