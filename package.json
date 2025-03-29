@@ -11,9 +11,11 @@
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-slot": "^1.1.2",
+    "@tabler/icons-react": "^3.31.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.485.0",
+    "motion": "^12.6.2",
     "next": "15.2.4",
     "next-themes": "^0.4.6",
     "react": "^19.0.0",

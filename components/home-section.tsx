@@ -54,64 +54,6 @@ export default function HomeSection() {
           </div>
         </div>
       </div>
-
-      <ul className="home-social absolute left-4 md:left-8 bottom-8 flex flex-col space-y-4">
-        <li>
-          <a
-            href="https://join.slack.com/t/keploy/shared_invite/zt-2poflru6f-_VAuvQfCBT8fDWv1WwSbkw"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center text-muted-foreground hover:text-[#FF914D] transition-colors"
-          >
-            <i className="fa fa-slack mr-2" aria-hidden="true"></i>
-            <span className="sr-only md:not-sr-only">Slack</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://twitter.com/Keployio"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center text-muted-foreground hover:text-[#FF914D] transition-colors"
-          >
-            <i className="fa fa-twitter mr-2" aria-hidden="true"></i>
-            <span className="sr-only md:not-sr-only">Twitter</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/keploy/keploy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center text-muted-foreground hover:text-[#FF914D] transition-colors"
-          >
-            <i className="fa fa-github mr-2" aria-hidden="true"></i>
-            <span className="sr-only md:not-sr-only">Github</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/company/keploy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center text-muted-foreground hover:text-[#FF914D] transition-colors"
-          >
-            <i className="fa fa-linkedin mr-2" aria-hidden="true"></i>
-            <span className="sr-only md:not-sr-only">Linkedin</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/@keploy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center text-muted-foreground hover:text-[#FF914D] transition-colors"
-          >
-            <i className="fa fa-youtube mr-2" aria-hidden="true"></i>
-            <span className="sr-only md:not-sr-only">Youtube</span>
-          </a>
-        </li>
-      </ul>
     </section>
   );
 }

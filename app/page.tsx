@@ -8,6 +8,7 @@ import JoinSection from "@/components/join-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import NewsletterSection from "@/components/newsletter-section";
 import Footer from "@/components/footer";
+import SocialDock from "@/components/social-dock";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -50,6 +51,7 @@ export default function Home() {
         <NewsletterSection />
       </main>
       <Footer />
+      <SocialDock />
     </div>
   );
 }

@@ -14,30 +14,14 @@ export default function Footer() {
               mocks, Keploy offers a faster alternative to traditional unit
               testing - and it keeps getting faster every day!
             </p>
-            <div className="flex space-x-4">
-              <i
-                className="fa fa-twitter text-lg text-gray-300 hover:text-[#FF914D] transition-colors"
-                aria-hidden="true"
-              ></i>
-              <i
-                className="fa fa-github text-lg text-gray-300 hover:text-[#FF914D] transition-colors"
-                aria-hidden="true"
-              ></i>
-              <i
-                className="fa fa-linkedin text-lg text-gray-300 hover:text-[#FF914D] transition-colors"
-                aria-hidden="true"
-              ></i>
-              <i
-                className="fa fa-youtube text-lg text-gray-300 hover:text-[#FF914D] transition-colors"
-                aria-hidden="true"
-              ></i>
-            </div>
           </div>
 
           <div className="md:col-span-8 lg:col-span-9">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-white">Solutions</h3>
+                <h3 className="text-lg font-semibold mb-4 text-white">
+                  Solutions
+                </h3>
                 <ul className="space-y-2">
                   <li>
                     <a
@@ -76,7 +60,9 @@ export default function Footer() {
 
               {/* Developers Column */}
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-white">Developers</h3>
+                <h3 className="text-lg font-semibold mb-4 text-white">
+                  Developers
+                </h3>
                 <ul className="space-y-2">
                   <li>
                     <a
@@ -115,7 +101,9 @@ export default function Footer() {
 
               {/* Resources Column */}
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
+                <h3 className="text-lg font-semibold mb-4 text-white">
+                  Resources
+                </h3>
                 <ul className="space-y-2">
                   <li>
                     <a
@@ -138,7 +126,9 @@ export default function Footer() {
 
               {/* Company Column */}
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
+                <h3 className="text-lg font-semibold mb-4 text-white">
+                  Company
+                </h3>
                 <ul className="space-y-2">
                   <li>
                     <a
