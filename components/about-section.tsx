@@ -62,7 +62,7 @@ export default function AboutSection() {
         <div className="text-center mb-16">
           <div className="inline-block relative">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#00163D] relative z-10">
-              What's in it for <span className="text-[#FF914D]">you?</span>
+              What&apos;s in it for <span className="text-[#FF914D]">you?</span>
             </h1>
             <div className="absolute -bottom-3 left-0 right-0 h-3 bg-[#D9CD9C] opacity-70 z-0 transform -rotate-1"></div>
           </div>
