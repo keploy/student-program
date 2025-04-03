@@ -110,7 +110,7 @@ export default function Header() {
             <button className="w-full mr-3 p-1 overflow-hidden border-2 hover:bg-primary-200/20 border-primary-50/0 hover:border-2 hover:border-orange-400 hover:text-primary-300 px-3 border-opacity-0 rounded-full lg:w-auto sm:border-opacity-100 relative group/button">
               <span className="absolute left-0 -mt-12 h-32 w-12 -translate-x-36 rotate-12 bg-orange-500 opacity-10 transition-transform duration-700 ease-out group-hover/button:-translate-x-[-400%]" />
               <Link
-                className="flex items-center ml-4 text-sm font-extrabold transition-colors lg:ml-0"
+                className="flex gap-2 items-center ml-4 text-sm font-extrabold transition-colors lg:ml-0"
                 href="https://github.com/keploy/keploy"
               >
                 <svg
@@ -126,7 +126,7 @@ export default function Header() {
                   />
                 </svg>
                 <span className="flex gap-1 text-base">
-                  <StarIcon className="size-5 text-yellow-300 transition-all duration-300 group-hover:filter group-hover:drop-shadow-[0_0_2px_#FFD700]" />
+                  {/* <StarIcon className="size-5 text-yellow-300 transition-all duration-300 group-hover:filter group-hover:drop-shadow-[0_0_2px_#FFD700]" /> */}
                   <p className={`font-semibold ${darkMode ? 'text-gray-200' : 'text-black'}`}>{formatStars(starsCount)}</p>
                 </span>
               </Link>
