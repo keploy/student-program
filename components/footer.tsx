@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="flex items-center mb-6">
               <a href="https://keploy.io">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/new-logo.svg"
                   alt="Keploy Logo"
                   width={120}
                   height={40}

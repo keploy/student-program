@@ -10,7 +10,7 @@ export default function Header() {
         <div className="header-logo">
           <Link href="/" className="site-logo">
             <Image
-              src="/images/logo.png"
+              src="/images/new-logo.svg"
               alt="Keploy Logo"
               width={120}
               height={40}

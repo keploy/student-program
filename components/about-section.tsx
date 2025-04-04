@@ -75,11 +75,15 @@ export default function AboutSection() {
         {windowWidth < 768 ? (
           <Slider {...sliderSettings}>
             {benefits.map((benefit, index) => (
-              <div key={index} className="group relative flex-none w-full snap-center px-4 md:px-0 md:w-auto">
+              <div
+                key={index}
+                className="group relative flex-none w-full snap-center px-4 md:px-0 md:w-auto"
+              >
                 <Card
                   className="border-none rounded-xl overflow-hidden transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl"
                   style={{
-                    background: "linear-gradient(135deg, #FFF 0%, #F5F5F5 100%)",
+                    background:
+                      "linear-gradient(135deg, #FFF 0%, #F5F5F5 100%)",
                     boxShadow: "0 10px 30px -10px rgba(0, 22, 61, 0.15)",
                   }}
                 >
@@ -131,7 +135,8 @@ export default function AboutSection() {
                 <Card
                   className="border-none rounded-xl overflow-hidden transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl"
                   style={{
-                    background: "linear-gradient(135deg, #FFF 0%, #F5F5F5 100%)",
+                    background:
+                      "linear-gradient(135deg, #FFF 0%, #F5F5F5 100%)",
                     boxShadow: "0 10px 30px -10px rgba(0, 22, 61, 0.15)",
                   }}
                 >
@@ -146,6 +151,7 @@ export default function AboutSection() {
                           src={benefit.image || "/placeholder.svg"}
                           alt={benefit.title}
                           fill
+                          unoptimized={true}
                           sizes="(max-width: 768px) 100px, 150px"
                           className="object-contain z-10 relative p-2"
                         />

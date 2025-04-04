@@ -14,7 +14,6 @@ export default function SocialDock() {
       title: "Slack",
       icon: (
         <SlackIcon
-          fill="currentColor"
           className="h-full w-full text-neutral-500 dark:text-neutral-300"
         />
       ),
@@ -24,7 +23,6 @@ export default function SocialDock() {
       title: "Twitter",
       icon: (
         <TwitterIcon
-          fill="currentColor"
           className="h-full w-full text-neutral-500 dark:text-neutral-300"
         />
       ),
@@ -34,7 +32,6 @@ export default function SocialDock() {
       title: "GitHub",
       icon: (
         <GithubIcon
-          fill="currentColor"
           className="h-full w-full text-neutral-500 dark:text-neutral-300"
         />
       ),
@@ -44,7 +41,6 @@ export default function SocialDock() {
       title: "LinkedIn",
       icon: (
         <LinkedinIcon
-          fill="currentColor"
           className="h-full w-full text-neutral-500 dark:text-neutral-300"
         />
       ),
@@ -54,7 +50,6 @@ export default function SocialDock() {
       title: "YouTube",
       icon: (
         <YoutubeIcon
-          fill="currentColor"
           className="h-full w-full text-neutral-500 dark:text-neutral-300"
         />
       ),

@@ -54,20 +54,23 @@ export default function NewsletterSection() {
             onSubmit={handleSubmit}
             className="flex flex-col md:flex-row items-center justify-center gap-3 max-w-md mx-auto bg-white/70 p-2 rounded-full backdrop-blur-sm border border-[#FF9F6B]/30"
           >
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="flex-grow bg-transparent border-transparent text-[#2C3E50] placeholder:text-[#718096] focus:ring-0 focus:border-transparent focus:outline-none md:pl-4"
-            />
+            <div className="relative w-full md:w-auto flex-grow">
+              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="w-full pl-10 pr-4 py-2 bg-white/40 rounded-full border border-gray-100 text-[#2C3E50] placeholder:text-[#718096] focus-visible:ring-1 focus-visible:ring-[#FF7F50] focus-visible:ring-offset-0"
+              />
+            </div>
             <Button
               type="submit"
               disabled={isSubmitting}
               className="w-full md:w-auto bg-[#FF7F50] hover:bg-[#E67348] text-white rounded-full px-6 py-2 transition-all duration-300 flex items-center justify-center gap-2"
             >
-              Subscribe
+              {isSubmitting ? "Subscribing..." : "Subscribe"}
               <ArrowRight className="h-4 w-4" />
             </Button>
           </form>
