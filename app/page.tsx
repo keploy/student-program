@@ -6,7 +6,7 @@ import HomeSection from "@/components/home-section";
 import AboutSection from "@/components/about-section";
 import JoinSection from "@/components/join-section";
 import TestimonialsSection from "@/components/testimonials-section";
-import NewsletterSection from "@/components/newsletter-section";
+// import NewsletterSection from "@/components/newsletter-section";
 import Footer from "@/components/footer";
 import SocialDock from "@/components/social-dock";
 
@@ -48,7 +48,7 @@ export default function Home() {
         <AboutSection />
         <JoinSection />
         <TestimonialsSection />
-        <NewsletterSection />
+        {/* <NewsletterSection /> */}
       </main>
       <Footer />
       <SocialDock />
