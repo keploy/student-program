@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useMemo } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,7 +13,7 @@ interface Benefit {
 }
 
 export default function AboutSection() {
-  const benefits: Benefit[] = [
+  const benefits = useMemo<Benefit[]>(() => [
     {
       title: "Learn",
       description:
@@ -35,7 +35,7 @@ export default function AboutSection() {
       perks: "Perks: 🌟 Mentorship on building and growing a community",
       image: "/images/code3.gif",
     },
-  ];
+  ], []);
 
   const scrollContainerRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(0);

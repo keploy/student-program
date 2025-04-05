@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -17,12 +17,12 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const navItems = [
+  const navItems = useMemo(() => [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Join Us", href: "#join" },
     { name: "Testimonials", href: "#testimonials" },
-  ];
+  ], []);
 
   useEffect(() => {
     const handleScroll = () => {
