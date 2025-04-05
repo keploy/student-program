@@ -9,12 +9,15 @@ import {
 } from "lucide-react";
 
 export default function SocialDock() {
+  // Using the same colors as in the NewsletterSection
+  // Primary color: #FF7F50 (coral)
+  // Hover color: #E67348 (darker coral)
   const socialLinks = [
     {
       title: "Slack",
       icon: (
         <SlackIcon
-          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+          className="h-full w-full text-[#FF7F50] hover:text-[#E67348]"
         />
       ),
       href: "https://join.slack.com/t/keploy/shared_invite/zt-2poflru6f-_VAuvQfCBT8fDWv1WwSbkw",
@@ -23,7 +26,7 @@ export default function SocialDock() {
       title: "Twitter",
       icon: (
         <TwitterIcon
-          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+          className="h-full w-full text-[#FF7F50] hover:text-[#E67348]"
         />
       ),
       href: "https://twitter.com/Keployio",
@@ -32,7 +35,7 @@ export default function SocialDock() {
       title: "GitHub",
       icon: (
         <GithubIcon
-          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+          className="h-full w-full text-[#FF7F50] hover:text-[#E67348]"
         />
       ),
       href: "https://github.com/keploy/keploy",
@@ -41,7 +44,7 @@ export default function SocialDock() {
       title: "LinkedIn",
       icon: (
         <LinkedinIcon
-          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+          className="h-full w-full text-[#FF7F50] hover:text-[#E67348]"
         />
       ),
       href: "https://www.linkedin.com/company/keploy",
@@ -50,7 +53,7 @@ export default function SocialDock() {
       title: "YouTube",
       icon: (
         <YoutubeIcon
-          className="h-full w-full text-neutral-500 dark:text-neutral-300"
+          className="h-full w-full text-[#FF7F50] hover:text-[#E67348]"
         />
       ),
       href: "https://www.youtube.com/@keploy",
@@ -61,8 +64,8 @@ export default function SocialDock() {
     <div className="fixed md:left-10 left-1/2 md:transform-none transform -translate-x-1/2 bottom-6 z-50">
       <FloatingDock
         items={socialLinks}
-        desktopClassName=""
-        mobileClassName="!flex-row !items-center"
+        desktopClassName="bg-white/70 backdrop-blur-sm border border-[#FF9F6B]/30 p-2 rounded-full"
+        mobileClassName="!flex-row !items-center bg-white/70 backdrop-blur-sm border border-[#FF9F6B]/30 p-2 rounded-full"
       />
     </div>
   );

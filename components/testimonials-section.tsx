@@ -101,13 +101,18 @@ export default function TestimonialsSection() {
                   <div className="mb-4 pb-4 border-b border-[#E6E2D4]">
                     <div className="flex items-center">
                       <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-[#FF914D] p-0.5">
-                        <Image
-                          src={testimonial.image || "/placeholder.svg"}
-                          alt={testimonial.name}
-                          fill
-                          sizes="(max-width: 768px) 64px, 64px"
-                          className="object-cover rounded-full"
-                        />
+                        <div className="absolute inset-0 rounded-full overflow-hidden">
+                          <Image
+                            src={testimonial.image || "/placeholder.svg"}
+                            alt={testimonial.name}
+                            fill
+                            sizes="(max-width: 768px) 64px, 64px"
+                            className="object-cover rounded-full"
+                            style={{
+                              borderRadius: '50%',
+                            }}
+                          />
+                        </div>
                       </div>
                       <div>
                         <p className="font-semibold text-[#00163D]">{testimonial.name}</p>
@@ -161,6 +166,10 @@ export default function TestimonialsSection() {
         .testimonial-slider .slick-prev:before, 
         .testimonial-slider .slick-next:before {
           color: #FF914D;
+        }
+        /* Ensure images are always circular in all devices */
+        .testimonial-slider img {
+          border-radius: 50% !important;
         }
       `}</style>
     </section>
