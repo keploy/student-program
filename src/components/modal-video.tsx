@@ -19,13 +19,10 @@ export default function ModalVideo({
   thumbWidth,
   thumbHeight,
   thumbAlt,
-  video,
-  videoWidth,
-  videoHeight,
+  video
 }: ModalVideoProps) {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   const { theme } = useTheme();
   const [color, setColor] = useState('#ffffff');

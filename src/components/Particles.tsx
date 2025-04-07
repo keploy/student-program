@@ -36,6 +36,20 @@ interface ParticlesProps {
   vx?: number;
   vy?: number;
 }
+
+interface Circle {
+  x: number;
+  y: number;
+  translateX: number;
+  translateY: number;
+  size: number;
+  alpha: number;
+  targetAlpha: number;
+  dx: number;
+  dy: number;
+  magnetism: number;
+}
+
 function hexToRgb(hex: string): number[] {
   hex = hex.replace("#", "");
 
@@ -67,7 +81,7 @@ const Particles: React.FC<ParticlesProps> = ({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
-  const circles = useRef<any[]>([]);
+  const circles = useRef<Circle[]>([]);
   const mousePosition = useMousePosition();
   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
@@ -118,22 +132,9 @@ const Particles: React.FC<ParticlesProps> = ({
     }
   };
 
-  interface Circle {
-    x: number;
-    y: number;
-    translateX: number;
-    translateY: number;
-    size: number;
-    alpha: number;
-    targetAlpha: number;
-    dx: number;
-    dy: number;
-    magnetism: number;
-  }
-
   const resizeCanvas = () => {
     if (canvasContainerRef.current && canvasRef.current && context.current) {
-      circles.current.length = 0;
+      circles.current = [];
       canvasSize.current.w = canvasContainerRef.current.offsetWidth;
       canvasSize.current.h = canvasContainerRef.current.offsetHeight;
       canvasRef.current.width = canvasSize.current.w * dpr;

@@ -6,7 +6,7 @@ interface MobileMenuProps {
   starsCount: number;
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ starsCount }) => {
+const MobileMenu: React.FC<MobileMenuProps> = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
   const trigger = useRef<HTMLButtonElement>(null);
   const mobileNav = useRef<HTMLDivElement>(null);

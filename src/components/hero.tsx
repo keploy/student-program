@@ -1,22 +1,11 @@
 "use client";
 import Link from "next/link";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import { useEffect, useState } from "react";
 import ModalVideo from "./modal-video";
 import { useDarkMode } from "@/components/utils/DarkModeContext"; // Import the dark mode context
 
 export default function Hero() {
-  const [isMobile, setIsMobile] = useState(false);
   const { darkMode } = useDarkMode(); // Access the dark mode state
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1038);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <section className={`relative ${darkMode ? "bg-neutral-900" : "bg-neutral-100"}`}>
@@ -58,7 +47,7 @@ export default function Hero() {
                 data-aos-delay="300"
               >
                 <Link
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSdj9q7dyRh3D7ZzRExHLWRRkNPOnLnFfrbKqSwqH3Ur4HzP4g/viewform"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSc5132o6GBa1PLZOVRK3ZxEwUE8DGJivguHoREwOprg0AMDzg/viewform"
                   target="_blank"
                   className="gap-2 text-sm font-medium bg-gradient-to-r from-orange-500 to-red-500 hover:from-red-500 hover:to-orange-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out text-white px-8 py-2.5 flex items-center justify-center"
                   rel="noopener noreferrer"
@@ -67,7 +56,6 @@ export default function Hero() {
                   <OpenInNewIcon className="transition-all duration-500 ease-out group-hover:scale-110 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 h-5 w-5" />
                 </Link>
               </div>
-
             </div>
           </div>
           <ModalVideo

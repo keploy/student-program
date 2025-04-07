@@ -3,12 +3,14 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "./logo";
 import NavItem from "./navItem";
-import { StarIcon, MoonIcon, SunIcon } from "@heroicons/react/16/solid";
+import {  MoonIcon, SunIcon } from "@heroicons/react/16/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useDarkMode } from "@/components/utils/DarkModeContext";
 
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
   const [starsCount, setStarsCount] = useState<number>(1000);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const { darkMode, toggleDarkMode } = useDarkMode();
 
   useEffect(() => {
@@ -19,7 +21,7 @@ export default function Header() {
         );
         if (response.ok) {
           const data = await response.json();
-          let stars = data.stargazers_count;
+          const stars = data.stargazers_count;
           setStarsCount(stars);
         } else {
           console.error("Failed to fetch stars count", response.statusText);
@@ -32,9 +34,12 @@ export default function Header() {
   }, []);
 
   const scrollHandler = () => {
-    window.pageYOffset > 10 ? setTop(false) : setTop(true);
+    if (window.pageYOffset > 10) {
+      setTop(false);
+    } else {
+      setTop(true);
+    }
   };
-
   useEffect(() => {
     scrollHandler();
     window.addEventListener("scroll", scrollHandler);
@@ -46,6 +51,10 @@ export default function Header() {
       return (count / 1000).toFixed(1) + "k";
     }
     return count.toString();
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
   };
 
   return (
@@ -126,7 +135,6 @@ export default function Header() {
                   />
                 </svg>
                 <span className="flex gap-1 text-base">
-                  {/* <StarIcon className="size-5 text-yellow-300 transition-all duration-300 group-hover:filter group-hover:drop-shadow-[0_0_2px_#FFD700]" /> */}
                   <p className={`font-semibold ${darkMode ? 'text-gray-200' : 'text-black'}`}>{formatStars(starsCount)}</p>
                 </span>
               </Link>
@@ -138,8 +146,59 @@ export default function Header() {
               <span>Sign In</span>
             </Link>
           </div>
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={toggleMobileMenu}
+              className="p-2 rounded-full bg-gray-200 text-black hover:bg-opacity-80 transition-colors"
+              aria-label="Toggle mobile menu"
+            >
+              {mobileMenuOpen ? (
+                <XMarkIcon className="h-6 w-6" />
+              ) : (
+                <Bars3Icon className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
+      {mobileMenuOpen && (
+        <div className="md:hidden">
+          <ul className="flex flex-col items-center">
+            <li>
+              <Link
+                href="/"
+                className="font-medium text-gray-600 hover:text-primary-300 px-3 py-3 flex items-center transition duration-150 ease-in-out"
+              >
+                <NavItem name="Home" />
+              </Link>
+            </li>
+            <li>
+              <Link
+                href=""
+                className="font-medium text-gray-600 hover:text-primary-300 px-3 py-3 flex items-center transition duration-150 ease-in-out"
+              >
+                <NavItem name="About" />
+              </Link>
+            </li>
+            <li>
+              <Link
+                href=""
+                className="font-medium text-gray-600 hover:text-primary-300 px-3 py-3 flex items-center transition duration-150 ease-in-out"
+              >
+                <NavItem name="Join" />
+              </Link>
+            </li>
+            <li>
+              <Link
+                href=""
+                className="font-medium text-gray-600 hover:text-primary-300 px-3 py-3 flex items-center transition duration-150 ease-in-out"
+              >
+                <NavItem name="Testimonials" />
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </header>
   );
 }

@@ -9,10 +9,12 @@ interface DarkModeContextType {
 const DarkModeContext = createContext<DarkModeContextType | undefined>(undefined);
 
 export const DarkModeProvider = ({ children }: { children: ReactNode }) => {
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
-    return isDarkMode;
-  });
+    setDarkMode(isDarkMode);
+  }, []);
 
   useEffect(() => {
     if (darkMode) {
@@ -20,12 +22,11 @@ export const DarkModeProvider = ({ children }: { children: ReactNode }) => {
     } else {
       document.documentElement.classList.remove('dark');
     }
+    localStorage.setItem('darkMode', String(darkMode));
   }, [darkMode]);
 
   const toggleDarkMode = () => {
-    const newDarkMode = !darkMode;
-    setDarkMode(newDarkMode);
-    localStorage.setItem('darkMode', String(newDarkMode));
+    setDarkMode((prev) => !prev);
   };
 
   return (
