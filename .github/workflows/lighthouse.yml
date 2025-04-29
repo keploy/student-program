@@ -1,4 +1,4 @@
-name: Lighthouse Audit for Static Site
+name: Lighthouse score
 
 on:
   pull_request:
