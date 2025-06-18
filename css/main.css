@@ -1875,13 +1875,13 @@ background: linear-gradient(180deg, rgba(251,156,82,0.16290266106442575) 35%, rg
   color: #ffffff;
 }
 
-.home-content__scroll {
+.home-content__scroll_down {
   position: absolute;
   right: 9.5rem;
   bottom: 16.4rem;
 }
 
-.home-content__scroll a {
+.home-content__scroll_down a {
   font-family: "TT Norms Pro", sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
@@ -1893,7 +1893,7 @@ background: linear-gradient(180deg, rgba(251,156,82,0.16290266106442575) 35%, rg
   padding-left: 2.5rem;
 }
 
-.home-content__scroll a::before {
+.home-content__scroll_down a::before {
   border-bottom: 2px solid #ff904d;
   border-right: 2px solid #ff904d;
   content: "";
@@ -1914,6 +1914,44 @@ background: linear-gradient(180deg, rgba(251,156,82,0.16290266106442575) 35%, rg
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
 }
+
+.home-content__scroll_up {
+  position: absolute;
+  top: auto;
+  right: 12rem;
+}
+
+.home-content__scroll_up a {
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: #ff904d;
+  position: relative;
+  display: inline-block;
+  line-height: 3rem;
+  padding-left: 2.5rem;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.home-content__scroll_up a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 8px;
+  width: 8px;
+  margin-top: -6px;
+  border-left: 2px solid #ff904d;
+  border-top: 2px solid #ff904d;
+  transform: rotate(45deg);
+  transform-origin: 66% 66%;
+  transition: all 0.15s ease-in-out;
+}
+
+
 
 .home-content__line {
   display: block;
