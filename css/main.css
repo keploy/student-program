@@ -3961,6 +3961,38 @@ html.no-csstransitions .home-content__main {
   }
 }
 
+.keploy-docs-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* similar orange gradient tone */
+    color: #fff;
+    font-size: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.keploy-docs-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+@media screen and (max-width: 768px) {
+    .keploy-docs-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .keploy-docs-btn {
+        width: 80%;
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+}
+
 .col-lg-2,
 .col-lg-5 {
   position: relative;
