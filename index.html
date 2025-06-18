@@ -471,6 +471,52 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
+  <!-- Scroll to top(STT) button -->
+  <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">⬆</button>
+
+  <!-- Styles for STT button -->
+  <style>
+    #scrollTopBtn {
+      display: none; 
+      position: fixed; 
+      bottom: 40px;
+      right: 30px;
+      z-index: 99; /* Show on top */
+      font-size: 18px;
+      border: none;
+      background: #333;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #555;
+    }
+  </style>
+
+  <!-- JavaScript for STT behavior -->
+  <script>
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {  // Show the button when user scrolls down 300px
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+
+    // When STT button clicked, scroll to top
+    function topFunction() {
+      document.body.scrollTop = 0; // Safari
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
 </body>
 
 </html>
