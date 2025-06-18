@@ -1,47 +1,89 @@
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen?logo=github)](CODE_OF_CONDUCT.md) 
-[![Slack](.github/slack.svg)](https://join.slack.com/t/keploy/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg)
-[![License](.github/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen?logo=github)](CODE_OF_CONDUCT.md)  [![Slack](.github/slack.svg)](https://join.slack.com/t/keploy/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg)  [![License](.github/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 # Keploy
-[Keploy](https://keploy.io) is a no-code testing platform that generates tests from API calls. 
 
+[Keploy](https://keploy.io) is a **no-code testing platform** that auto-generates tests from real API calls.  
+It captures requests, responses, DB queries, and mocks external dependencies to create test cases without writing them manually.
 
-## Community support
-We'd love to collaborate with you to make Keploy great. To get started:
-* [Slack](https://join.slack.com/t/keploy/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg) - Discussions with the community and the team.
-* [GitHub](https://github.com/keploy/keploy/issues) - For bug reports and feature requests.
+---
 
-# How to Contribute ??
+## 🚀 Community Support
 
-To Contribute to Keploy Student Program Website, please follow the following steps.
+We're excited to have you join our community and help make Keploy even better!
 
-1. Fork this Repository(by clicking Fork Icon on top right of the repository).
+- 💬 **[Slack](https://join.slack.com/t/keploy/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg)** – Chat with the team and other contributors.
+- 🐛 **[GitHub Issues](https://github.com/keploy/keploy/issues)** – Report bugs and suggest features.
+- [LinkedIn](https://www.linkedin.com/company/keploy)
+- [YouTube](https://www.youtube.com/@Keploy)
+- [Twitter](https://twitter.com/keploy_io)
+  
+---
 
+## 🤝 How to Contribute
 
-2. Clone this repository to your Local Machine using:
-``` bash
-git clone https://github.com/keploy/student-program
+Want to contribute to the **Keploy Student Program Website**? Follow these steps:
 
+### 1. Fork the Repository
+
+Click the **Fork** button (top right) on [GitHub](https://github.com/keploy/student-program) to create your own copy.
+
+### 2. Clone Your Fork Locally
+
+```bash
+git clone https://github.com/<your-username>/student-program
+cd student-program
 ```
-3. Install the required dependencies using:
-```
+
+### 3. Install Dependencies
+
+```bash
 npm install
-``` 
-
-4. Once the required packages are installed, run the following command to host this project on localhost:
 ```
+
+### 4. Start the Development Server
+
+```bash
 npm start
 ```
 
-5. Make the desired changes
+This will host the project at `http://localhost:3000/`.
 
+### 5. Make Your Changes
 
-7. Add, commit & push the changes, using:
+Implement your changes or features in the codebase.
 
-``` bash
+### 6. Add, Commit & Push Your Changes
+
+```bash
 git add .
-git commit -m "changes you made in the project" #Please make sure to mention which issue is closed by these changes. You can also use "cz c"
-git push 
+git commit -m "fix: short description of your changes (e.g., closes #<issue-number>)"
+git push origin main
 ```
 
-6. Before raising a PR, please sure to 'Fetch Upstream' to avoid conflicts with existing codebase.
+> 💡 Tip: Use `cz c` if you're using Commitizen for standardized commit messages.
+
+### 7. Sync with Upstream (Important)
+
+Before creating a Pull Request (PR), always fetch the latest changes from the main repository to avoid conflicts:
+
+```bash
+git remote add upstream https://github.com/keploy/student-program
+git fetch upstream
+git merge upstream/main
+```
+
+### 8. Create a Pull Request
+
+Go to your forked repository and click on **"Compare & pull request"**.  
+Write a clear title and description, mention the issue number if applicable, and submit your PR.
+
+---
+
+## 📜 Code of Conduct
+
+Please make sure to read and follow our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
+
+---
+
+Thank you for contributing to **Keploy** 💙  
+Together, let’s make testing effortless for developers!
