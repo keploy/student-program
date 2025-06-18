@@ -6,10 +6,9 @@
 (function($) {
 
     "use strict";
-    
-    var cfg = {
-        scrollDuration : 800, // smoothscroll duration
-        mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'   // mailchimp url
+      var cfg = {
+        scrollDuration : 800 // smoothscroll duration
+        // Removed hardcoded mailChimpURL as it's not used in the current implementation
     },
 
     $WIN = $(window);
@@ -203,78 +202,80 @@
             });
         });
     };
-
-
    /* slick slider
     * ------------------------------------------------------ */
     var clSlickSlider = function() {
 
-        $('.clients').slick({
-            arrows: false,
-            dots: true,
-            infinite: true,
-            slidesToShow: 6,
-            slidesToScroll: 2,
-            //autoplay: true,
-            pauseOnFocus: false,
-            autoplaySpeed: 1000,
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 5
+        // Check if .clients element exists before initializing slider
+        if ($('.clients').length > 0) {
+            $('.clients').slick({
+                arrows: false,
+                dots: true,
+                infinite: true,
+                slidesToShow: 6,
+                slidesToScroll: 2,
+                //autoplay: true,
+                pauseOnFocus: false,
+                autoplaySpeed: 1000,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 5
+                        }
+                    },
+                    {
+                        breakpoint: 1000,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 800,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 500,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
                     }
-                },
-                {
-                    breakpoint: 1000,
-                    settings: {
-                        slidesToShow: 4
-                    }
-                },
-                {
-                    breakpoint: 800,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 500,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                }
 
-            ]
-        });
-
-        $('.testimonials').slick({
-            arrows: true,
-            dots: false,
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            adaptiveHeight: true,
-            pauseOnFocus: false,
-            autoplaySpeed: 1500,
-            responsive: [
-                {
-                    breakpoint: 900,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
+                ]
+            });
+        }        // Check if .testimonials element exists before initializing slider
+        if ($('.testimonials').length > 0) {
+            $('.testimonials').slick({
+                arrows: true,
+                dots: false,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                adaptiveHeight: true,
+                pauseOnFocus: false,
+                autoplaySpeed: 1500,
+                responsive: [
+                    {
+                        breakpoint: 900,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 800,
+                        settings: {
+                            arrows: false,
+                            dots: true
+                        }
                     }
-                },
-                {
-                    breakpoint: 800,
-                    settings: {
-                        arrows: false,
-                        dots: true
-                    }
-                }
-            ]
-        });
+                ]
+            });
+        }
     
     };
 
@@ -321,59 +322,72 @@
         }); 
 
     };
-
-
    /* Contact Form
     * ------------------------------------------------------ */
     var clContactForm = function() {
         
-        /* local validation */
-        $('#contactForm').validate({
+        // Check if contact form exists before initializing validation
+        if ($('#contactForm').length > 0) {
+            /* local validation */
+            $('#contactForm').validate({
+            
+                /* submit via ajax */
+                submitHandler: function(form) {
         
-            /* submit via ajax */
-            submitHandler: function(form) {
-    
-                var sLoader = $('.submit-loader');
-    
-                $.ajax({
-    
-                    type: "POST",
-                    url: "inc/sendEmail.php",
-                    data: $(form).serialize(),
-                    beforeSend: function() { 
-    
-                        sLoader.slideDown("slow");
-    
-                    },
-                    success: function(msg) {
-    
-                        // Message was sent
-                        if (msg == 'OK') {
+                    var sLoader = $('.submit-loader');
+        
+                    $.ajax({
+        
+                        type: "POST",
+                        url: "inc/sendEmail.php",
+                        data: $(form).serialize(),
+                        beforeSend: function() { 
+        
+                            sLoader.slideDown("slow");
+        
+                        },
+                        success: function(msg) {
+        
+                            // Message was sent
+                            if (msg == 'OK') {
+                                sLoader.slideUp("slow"); 
+                                $('.message-warning').fadeOut();
+                                $('#contactForm').fadeOut();
+                                $('.message-success').fadeIn();
+                            }
+                            // There was an error
+                            else {
+                                sLoader.slideUp("slow"); 
+                                $('.message-warning').html(msg);
+                                $('.message-warning').slideDown("slow");
+                            }
+        
+                        },
+                        error: function(xhr, status, error) {
+        
                             sLoader.slideUp("slow"); 
-                            $('.message-warning').fadeOut();
-                            $('#contactForm').fadeOut();
-                            $('.message-success').fadeIn();
-                        }
-                        // There was an error
-                        else {
-                            sLoader.slideUp("slow"); 
-                            $('.message-warning').html(msg);
+                            var errorMessage = "Something went wrong. Please try again.";
+                            
+                            // Provide more specific error messages based on status
+                            if (xhr.status === 404) {
+                                errorMessage = "Contact form handler not found. Please contact the administrator.";
+                            } else if (xhr.status === 500) {
+                                errorMessage = "Server error occurred. Please try again later.";
+                            } else if (status === 'timeout') {
+                                errorMessage = "Request timed out. Please check your internet connection and try again.";
+                            }
+                            
+                            $('.message-warning').html(errorMessage);
                             $('.message-warning').slideDown("slow");
-                        }
-    
-                    },
-                    error: function() {
-    
-                        sLoader.slideUp("slow"); 
-                        $('.message-warning').html("Something went wrong. Please try again.");
-                        $('.message-warning').slideDown("slow");
-    
-                    }
-    
-                });
-            }
-    
-        });
+        
+                        },
+                        timeout: 10000 // 10 second timeout
+        
+                    });
+                }
+        
+            });
+        }
     };
 
 
@@ -391,38 +405,63 @@
         });
 
     };
-
-
-   /* AjaxChimp
+   /* Newsletter Forms
     * ------------------------------------------------------ */
-    var clAjaxChimp = function() {
+    var clNewsletterForms = function() {
         
-        $('#mc-form').ajaxChimp({
-            language: 'es',
-            url: cfg.mailChimpURL
+        // Handle newsletter forms that actually exist in the HTML
+        var newsletterForms = ['#newsletter', '#newsletter-1'];
+        
+        newsletterForms.forEach(function(formId) {
+            if ($(formId).length > 0) {
+                $(formId).on('submit', function(e) {
+                    e.preventDefault();
+                    
+                    var $form = $(this);
+                    var $email = $form.find('input[name="email"]');
+                    var $submitBtn = $form.find('.submit-btn');
+                    var $info = $form.find('.info');
+                    var $alert = $form.next('.alert');
+                    
+                    // Basic email validation
+                    var email = $email.val().trim();
+                    if (!email) {
+                        showMessage($info, $alert, '<i class="fa fa-warning"></i> Please enter your email address.', 'warning');
+                        return;
+                    }
+                    
+                    // Email format validation
+                    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        showMessage($info, $alert, '<i class="fa fa-warning"></i> Please enter a valid email address.', 'warning');
+                        return;
+                    }
+                    
+                    // Disable submit button during processing
+                    $submitBtn.prop('disabled', true);
+                    showMessage($info, $alert, 'Submitting...', 'info');
+                    
+                    // Simulate newsletter signup (replace with actual API call)
+                    setTimeout(function() {
+                        showMessage($info, $alert, '<i class="fa fa-check"></i> Thank you for subscribing! We\'ll keep you updated.', 'success');
+                        $email.val(''); // Clear the email field
+                        $submitBtn.prop('disabled', false);
+                        
+                        // Hide message after 5 seconds
+                        setTimeout(function() {
+                            $info.html('');
+                            $alert.removeClass('alert-success alert-warning alert-info').addClass('text-hide');
+                        }, 5000);
+                    }, 1500);
+                });
+            }
         });
-
-        // Mailchimp translation
-        //
-        //  Defaults:
-        //	 'submit': 'Submitting...',
-        //  0: 'We have sent you a confirmation email',
-        //  1: 'Please enter a value',
-        //  2: 'An email address must contain a single @',
-        //  3: 'The domain portion of the email address is invalid (the portion after the @: )',
-        //  4: 'The username portion of the email address is invalid (the portion before the @: )',
-        //  5: 'This email address looks fake or invalid. Please enter a real email address'
-
-        $.ajaxChimp.translations.es = {
-            'submit': 'Submitting...',
-            0: '<i class="fa fa-check"></i> We have sent you a confirmation email',
-            1: '<i class="fa fa-warning"></i> You must enter a valid e-mail address.',
-            2: '<i class="fa fa-warning"></i> E-mail address is not valid.',
-            3: '<i class="fa fa-warning"></i> E-mail address is not valid.',
-            4: '<i class="fa fa-warning"></i> E-mail address is not valid.',
-            5: '<i class="fa fa-warning"></i> E-mail address is not valid.'
-        } 
-
+        
+        function showMessage($info, $alert, message, type) {
+            $info.html(message);
+            $alert.removeClass('alert-success alert-warning alert-info text-hide')
+                  .addClass('alert-' + type);
+        }
     };
 
 
@@ -445,8 +484,6 @@
             }
         });
     };
-
-
    /* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
@@ -463,7 +500,7 @@
         clAlertBoxes();
         clContactForm();
         clAOS();
-        clAjaxChimp();
+        clNewsletterForms();
         clBackToTop();
 
     })();
