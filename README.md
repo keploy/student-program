@@ -3,7 +3,7 @@
 [![License](.github/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 # Keploy
-[Keploy](https://keploy.io) is a no-code testing platform that generates tests from API calls. 
+[Keploy](https://keploy.io) is a no-code testing platform that generates tests from API calls. Keploy is an open source.
 
 
 ## Community support
@@ -13,7 +13,6 @@ We'd love to collaborate with you to make Keploy great. To get started:
 
 # How to Contribute ??
 
-To Contribute to Keploy Student Program Website, please follow the following steps.
 
 1. Fork this Repository(by clicking Fork Icon on top right of the repository).
 
