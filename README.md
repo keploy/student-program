@@ -1,4 +1,4 @@
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen?logo=github)](CODE_OF_CONDUCT.md)  [![Slack](.github/slack.svg)](https://join.slack.com/t/keploy/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg)  [![License](.github/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen?logo=github)](CODE_OF_CONDUCT.md)    [![Slack](.github/slack.svg)](https://join.slack.com/t/keploy/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg)    [![License](.github/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 # Keploy
 
@@ -19,6 +19,7 @@ We're excited to have you join our community and help make Keploy even better!
   
 ---
 
+
 ## 🤝 How to Contribute
 
 Want to contribute to the **Keploy Student Program Website**? Follow these steps:
@@ -28,6 +29,7 @@ Want to contribute to the **Keploy Student Program Website**? Follow these steps
 Click the **Fork** button (top right) on [GitHub](https://github.com/keploy/student-program) to create your own copy.
 
 ### 2. Clone Your Fork Locally
+
 
 ```bash
 git clone https://github.com/<your-username>/student-program
@@ -87,3 +89,7 @@ Please make sure to read and follow our [Code of Conduct](CODE_OF_CONDUCT.md) be
 
 Thank you for contributing to **Keploy** 💙  
 Together, let’s make testing effortless for developers!
+
+## 📄 License
+
+This project is licensed under the terms of the [Apache 2.0 License](https://opensource.org/licenses/Apache-2.0).
