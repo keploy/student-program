@@ -52,7 +52,7 @@ export default function Hero() {
                   className="gap-2 text-sm font-medium bg-gradient-to-r from-orange-500 to-red-500 hover:from-red-500 hover:to-orange-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out text-white px-8 py-2.5 flex items-center justify-center"
                   rel="noopener noreferrer"
                 >
-                  <span>Join Cloud Waiting List</span>
+                  <span>Get Started</span>
                   <OpenInNewIcon className="transition-all duration-500 ease-out group-hover:scale-110 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 h-5 w-5" />
                 </Link>
               </div>
