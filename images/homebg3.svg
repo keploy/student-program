@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="783px" height="415px" viewBox="0 0 783 415" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>tab-bg</title>
+    <defs>
+        <linearGradient x1="54.065971%" y1="14.3467581%" x2="54.065971%" y2="83.4392759%" id="linearGradient-1">
+            <stop stop-color="#FFC384" stop-opacity="0.1" offset="0%"></stop>
+            <stop stop-color="#FFBB7C" stop-opacity="0.4" offset="22.7122879%"></stop>
+            <stop stop-color="#FFA868" stop-opacity="0.4" offset="78.0685012%"></stop>
+            <stop stop-color="#FF904D" stop-opacity="0.1" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0.804907969%" y1="36.5694297%" x2="99.1749296%" y2="63.3366613%" id="linearGradient-2">
+            <stop stop-color="#FF904D" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#FF904D" stop-opacity="0" offset="30.7508618%"></stop>
+            <stop stop-color="#EC6214" stop-opacity="0" offset="67.5392765%"></stop>
+            <stop stop-color="#EC6214" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tab-bg" transform="translate(1.000000, -4.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero" stroke="url(#linearGradient-2)">
+            <polygon id="Path" points="0 5 270.498554 76.3614366 781 5 781 418 510.052126 345.533653 0 418"></polygon>
+        </g>
+    </g>
+</svg>
