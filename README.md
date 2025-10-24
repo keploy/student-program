@@ -13,35 +13,40 @@ We'd love to collaborate with you to make Keploy great. To get started:
 
 # How to Contribute ??
 
-To Contribute to Keploy Student Program Website, please follow the following steps.
+To contribute to the Keploy Student Program Website, please follow these steps:
 
-1. Fork this Repository(by clicking Fork Icon on top right of the repository).
+1. **Fork** this repository by clicking the Fork icon at the top right of the repository page.
+2. **Clone** your forked repository to your local machine:
+   ```bash
+   git clone https://github.com/your-username/student-program
+   ```
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+4. **Start the project locally**:
+   ```bash
+   npm start
+   ```
+5. **Make your changes** to the codebase.
+6. **Fetch upstream** to avoid conflicts before pushing:
+   ```bash
+   git fetch upstream
+   git merge upstream/main
+   ```
+7. **Add, commit, and push** your changes:
+   ```bash
+   git add .
+   git commit -m "Describe your changes here. If closing an issue, mention it."
+   git push
+   ```
+8. **Create a Pull Request** from your fork to the main repository.
 
+---
 
-2. Clone this repository to your Local Machine using:
-``` bash
-git clone https://github.com/keploy/student-program
+**Tips for Beginners:**
+- Make sure to add clear commit messages.
+- If you are unsure about your changes, ask for feedback in your Pull Request.
+- Check the [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
-```
-3. Install the required dependencies using:
-```
-npm install
-``` 
-
-4. Once the required packages are installed, run the following command to host this project on localhost:
-```
-npm start
-```
-
-5. Make the desired changes
-
-
-7. Add, commit & push the changes, using:
-
-``` bash
-git add .
-git commit -m "changes you made in the project" #Please make sure to mention which issue is closed by these changes. You can also use "cz c"
-git push 
-```
-
-6. Before raising a PR, please sure to 'Fetch Upstream' to avoid conflicts with existing codebase.
+---
