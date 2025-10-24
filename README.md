@@ -1,3 +1,5 @@
+**Here's a simple, beginner-friendly step-by-step guide to creating a Pull Request (PR) to one of the Keploy repositories.**
+
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen?logo=github)](CODE_OF_CONDUCT.md) 
 [![Slack](.github/slack.svg)](https://join.slack.com/t/keploy/shared_invite/zt-357qqm9b5-PbZRVu3Yt2rJIa6ofrwWNg)
 [![License](.github/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
