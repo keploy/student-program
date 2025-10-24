@@ -1,0 +1,49 @@
+name: Lighthouse score
+
+on:
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install static server
+        run: npm install -g serve
+
+      - name: Serve PR branch (background on port 3001)
+        run: |
+          serve . -l 3001 &
+          sleep 5
+      - name: Checkout main branch into separate folder
+        run: |
+          git fetch origin main
+          git worktree add main-branch origin/main
+      - name: Serve Main branch (background on port 3000)
+        run: |
+          cd main-branch
+          serve . -l 3000 &
+          cd ..
+          sleep 5
+
+      - name: Create output directory for Lighthouse
+        run: mkdir -p ${{ github.workspace }}/tmp/artifacts
+
+      - name: Run Lighthouse audit for both PR and Main
+        uses: foo-software/lighthouse-check-action@master
+        with:
+          gitAuthor: ${{ github.actor }}
+          gitBranch: ${{ github.head_ref }}
+          gitHubAccessToken: ${{ secrets.GITHUB_TOKEN }}
+          outputDirectory: ${{ github.workspace }}/tmp/artifacts
+          urls: 'http://localhost:3000/?branch=main,http://localhost:3001/?branch=pr'
+          sha: ${{ github.sha }}
