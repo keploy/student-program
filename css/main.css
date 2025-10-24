@@ -2935,6 +2935,11 @@ html.no-csstransitions .home-content__main {
   grid-column: 2/4;
   grid-row: 2/3;
 }
+.div6 {
+  background: #644a3c;
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
 .userdetails {
   display: flex;
 }
